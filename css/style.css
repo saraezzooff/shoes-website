@@ -1,0 +1,510 @@
+/* Global */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* colors */
+:root{
+    --primary-color: #8db596;
+    --dark-color: #000;
+}
+/* Navbar */
+
+nav .flex{
+    justify-content: space-around;
+} 
+
+nav .links ul{
+    list-style: none;
+}
+
+nav .links ul li{
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
+nav .nav-icons i{
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+nav .links ul li a{
+    text-decoration: none;
+    color: #111;
+    height: 40px;
+    display: block;
+}
+
+nav .links ul li a:hover ,nav .links ul li a.active{
+    color: var(--primary-color);
+}
+
+
+.fa-heart{
+    position: relative;
+}
+
+.fa-cart-plus{
+    position: static;
+    position: relative;
+}
+nav .nav-icons .fa-heart:after, nav .nav-icons .fa-cart-plus:after{
+    content: '1';
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    width: 17.5px;
+    height: 17.5px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Slider */
+
+.slider .slide{
+    /* background-image: url('/img/slide-1.jpg'); */
+
+    display:none;
+}
+
+.slider .slide.active{
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slider .slide-2{
+    background-image: url('/img/slide-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slider .slide-3{
+    background-image: url('/img/slide-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.slider{
+    position: relative;
+    height: 400px;
+    width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+
+.slide{
+    width: 1100px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    animation: zoomOut 2s ease;
+    overflow: hidden;
+
+}
+
+
+.slide-caption{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    display: none;
+
+}
+.slide.active .slide-caption{
+    display: inline-block;
+    left: 100px;
+    top: 50%;
+
+}
+.slide-caption a{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #fff;
+    color: #111;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Controls */
+.slider .number-controls{
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+    display: flex;
+}
+
+.number-controls div{
+    margin: 0 10px;
+    transition: .3 ease;
+}
+
+.number-controls div.active{
+    border-bottom: 1px solid #000;
+}
+
+.number-controls div:hover{
+    background-color: var(--primary-color);
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.slider .arrow-controls .next{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    transition: .2s ease;
+}
+.slider .arrow-controls .next img, .slider .arrow-controls .prev img{
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+
+.slider .arrow-controls .prev{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    transition: .2s ease;
+}
+
+.slider .arrow-controls .prev:hover, .slider .arrow-controls .next:hover{
+    background-color: var(--primary-color);
+
+}
+
+/* Tabs */
+.tabs{
+    width: 100%; 
+    height: 1350px;
+    position: relative;
+    margin: 100px auto;
+    overflow: hidden;
+}
+.tab-header div{
+    cursor: pointer;
+    margin: 0 30px;
+    margin-bottom: 100px;
+    text-transform: capitalize;
+}
+.tab-header .active{
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.tab-body{
+    width: 100%;
+    position: absolute;
+    transform: translateX(100%);
+}
+
+.tab-body .card{
+    width: 250px;
+}
+
+#new-arrivals{
+    transform: translateX(0%);
+
+}
+
+.product-row.flex{
+    justify-content: initial;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.productCard{
+    /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); */
+    /* padding: 10px; */
+    margin: 10px;
+}
+
+.productCard:hover{
+
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.productCard h5{
+    color: #333;
+    padding : 10px 0 10px 10px;
+}
+
+.productCard .price{
+    font-weight: bold;
+    padding: 0 0 10px 10px;
+}
+.product-img{
+    position: relative;
+}
+.sale, .new{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* z-index: 100; */
+}
+
+.Shop-now{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border: 1px solid var(--primary-color);
+    height: 40px;
+    width: 100px;
+    background-color: #fff;
+    color: #111;
+}
+
+/* Subscribe Section */
+.subscribe{
+    margin-bottom: 50px;
+}
+.subscribe h1{
+   font-weight: 600;
+}
+
+.subscribe p{
+    color: #393e46;
+}
+
+.subscribe input {
+    outline: none;
+    height: 40px;
+    width: 220px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+}
+
+.scubscribeBtn{
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    height: 40px;
+    width: 90px;
+    margin-left: 20px;
+}
+
+/* Support */
+
+.support{
+    margin-bottom: 50px;
+}
+
+.support .flex{
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.support div{
+    margin: 0 20px 10px;
+}
+.support-icon i{
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+
+
+
+.support-content h3{
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+/* footer */
+footer .flex{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer .container{
+    margin: 0;
+}
+
+footer .column{
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+footer h3, footer p{
+    color: #6b6969;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.pay-icons img{
+    margin-right: 10px;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li{
+    padding-right: 10px;
+    color: #6b6969;
+
+}
+
+footer ul li i{
+
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+
+}
+
+.fa-facebook-f, .fa-twitter, .fa-instagram, .fa-pinterest-p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    color: #333;
+}
+
+.fa-facebook-f:hover, .fa-twitter:hover, .fa-instagram:hover, .fa-pinterest-p:hover{
+    background-color: var(--primary-color);
+    border: none;
+}
+
+
+
+footer .column .flex{
+    justify-content: start;
+}
+
+/* menu toggle */
+.menu-toggle{
+    color: var(--primary-color);
+    line-height: 50px;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+/* KeyFrames */
+@keyframes zoomOut{
+    0%{
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes slideToRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(100%);
+    }
+}
+/* medium devices */
+@media(max-width:991px){
+    .menu-toggle{
+        display: block;
+    }
+
+    nav .links {
+        /* display: none; */
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background-color: #333;
+        top: 75px;
+        left: -100%;
+        z-index: 1000;
+        transition: .2s ease ;
+    }
+
+    nav .links.active{
+        left: 0;
+    }
+
+    nav .links ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav .links ul li{
+        transition: .2s ease;
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        height: 100%;
+        line-height: 4rem;
+    }
+
+    nav .links ul li a{
+        width: 100%;
+    }
+
+    nav .links ul li:hover{
+        background-color: rgba(255, 255, 255, .2);
+        width: 100%;
+
+    }
+
+    .tab-header div{
+        margin: 0 20px;
+        margin-bottom: 50px;
+    }
+
+}
+
+/* mobile devices */
+@media(max-width : 500px){
+
+    .slider .arrow-controls{
+        display: none;
+    }
+
+    .slide.active .slide-caption{
+        left: 50px;
+    }
+    .subscribe input{
+        margin-right: 10px;
+    }
+
+    .slide{
+        width: 500px;
+        margin: 0;
+    }
+
+    .tab-header div{
+        margin: 0 10px;
+        margin-bottom: 30px;
+    }
+
+}
