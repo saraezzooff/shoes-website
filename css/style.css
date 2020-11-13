@@ -267,6 +267,11 @@ nav .nav-icons .fa-heart:after, nav .nav-icons .fa-cart-plus:after{
     /* z-index: 100; */
 }
 
+.sale-span{
+    color: #6b6969;
+    padding-left: 20px;
+}
+
 .Shop-now{
     position: absolute;
     bottom: 0;
@@ -276,6 +281,11 @@ nav .nav-icons .fa-heart:after, nav .nav-icons .fa-cart-plus:after{
     width: 100px;
     background-color: #fff;
     color: #111;
+}
+
+.Shop-now:hover{
+    color:#fff;
+    background-color: var(--primary-color);
 }
 
 /* Subscribe Section */
