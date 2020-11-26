@@ -272,6 +272,28 @@ nav .nav-icons .fa-heart:after, nav .nav-icons .fa-cart-plus:after{
     padding-left: 20px;
 }
 
+.cart{
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    background: var(--primary-color);
+    height: 50px;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: none;
+}
+
+.productCard:hover > .product-img  > .cart {
+    display: flex;
+}
+.cart i{
+    color: #6b6969;
+}
+
 .Shop-now{
     position: absolute;
     bottom: 0;
